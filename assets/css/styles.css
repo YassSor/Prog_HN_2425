@@ -1,0 +1,80 @@
+html {
+    background: linear-gradient(#ADD8E6, #FFC0CB); 
+	font-size: 14px;
+	margin:auto;
+}
+
+h1 {  
+
+	font-size:2.5em;
+	
+	}
+	
+h2 {  
+
+	font-size:1.5em
+	}
+	
+#page{  
+	background-color: #E7FFCE;
+	border: 7px solid white;
+	margin : 200px;
+	max-width : 100%;
+	}
+	
+.entete{  
+	text-align: center;
+	margin : auto;
+	}
+	
+#aboutme{  
+	padding : 50px;
+	}
+	
+
+#logo {
+	width: 25%;
+	height: auto;
+	margin : 10px;
+} 
+
+#avatar{
+	width: 15%;
+	height: auto;
+	margin : 10px;
+} 
+
+
+p {
+	color: purple;
+	font-weight: bold;
+	font-family: Georgia, serif;
+}
+
+
+	
+table, th, td { 
+	text-align: center;
+	border: 2px solid black;
+	width: auto;
+	border-collapse: separate; 
+	border-spacing : 3px;
+	border-radius : 3px;
+} 
+
+ol {
+  list-style-position: inside;
+} 
+
+footer {
+	text-align: center;
+	border: 1.5px solid purple;
+} 
+
+a {
+	text-align: center;
+	color: black;
+} 
+
+
+
