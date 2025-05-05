@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<div id="page">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title> Programmation pour les Humamnités Numériques </title>
-		
-<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" language="javascript" src="assets/js/main.js"></script>
-    </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- la balise meta viewport permet de contrôler la mise en page sur mobile - ressource : https://developer.mozilla.org/fr/docs/Web/HTML/Guides/Viewport_meta_element -->	
+		<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" language="javascript" src="assets/js/main.js"></script>
+		<script src="assets/js/canvasjs.min.js"></script>
+		<title>Projet HTML</title>  <!-- la balise titre permet de nommer la page HTML -ressource : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/title -->
+		<link rel="icon" href="assets/img/icone.png" type="image/icon type"> <!-- l'attribut rel="icon" renvoie à l’icône presantant le site dans l'onglet - ressource : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/link --> 
+ </head>
 	
 
     <body>
-	<div class="entete">
-<h1>Y</h1>
-<h2>Licence 3 des Sciences du Langage</h2>
-<img id="logo" src="./assets/img/logo.png"/><img id="avatar" src="./assets/img/avatar.png"/>
+	<div id="page">      <!-- La balise div correspond à une division du contenu du texte et l'élément id donne un identifiant unique à cette division - ressources : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Global_attributes/id et https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/div-->
+	<div class="entete"> <!-- L'attibut class permet d'appliquer un ou plusieurs styles définis dans une feuille CSS -->
+	<div id="logo"><img src="assets/img/logo-sorbonne.png" width="100%" height="300%"></div>
+		<h1>Y</h1>    <!--heading=en-tête, de type 1  -->
+		<h2>Licence 3 des Sciences du Langage</h2> <!--heading=en-tête, de type 2  -->
+		<center><img id="avatar" src="./assets/img/avatar.png" alt="avatar"></center> <!-- L'attribut alt permet d'afficher le description de l'image, si jamais cette dernière n'est visualisée correctement-->
 	</div>
 
+	<p><center><button id="monCV" onclick="MonCV()">Afficher Mon CV</button></center></p> <!-- La balise button permet de créer un bouton cliquable en HTML et l'attribut onclick définit la fonction à exécuter lorsqu'on clique dessus - ressources : https://www.w3schools.com/jsref/event_onclick.asp -->
 	<div id="aboutme">
-<p>Mon CV des trois dernières années :</p>
-<table>
-    <thead>
-        <tr><th>année universitaire</th><th>Statut</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>2024-2025</td><td>Cette année</td></tr>
-        <tr><td>2023-2023</td><td>L'année d'avant</td></tr>
-        <tr><td>2022-2023</td><td>L'année d'encore avant</td></tr>
-    </tbody>
-</table>
+		<p>Mon CV des trois dernières années :</p>   
+		<table> <!-- La balise table sert à afficher des données dans un tableau, avec <thead> pour l'en-tête, <th> pour les cellulles d'en-têtes,<tbody> pour le contenu du tableau, <tr> pour les lignes et <td> pour le contenu des cellules - resource : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/table-->
+			<thead>  
+				<tr><th>année universitaire</th><th>Statut</th></tr>
+			</thead>
+			<tbody>
+			<tr><td>2024-2025</td><td>Cette année</td></tr>
+			<tr><td>2023-2023</td><td>L'année d'avant</td></tr>
+			<tr><td>2022-2023</td><td>L'année d'encore avant</td></tr>
+			</tbody>
+		</table>
 
-<p>Voici les cinq derniers livres que j'ai lu :</p>
-<ol>
-    <li><i>Orgueil et préjugés</i>, Jane Austen, édition Gallimard</li>
-    <li><i>Jane Eyre</i>, Charlotte Brontë, édition Wordsworth Classics</li>
-    <li><i>Animal Farm</i>, George Orwell, édition Penguin</li>
-    <li><i>Les Hauts des Hurlevent</i>, Emily Brontë, édition Hauteville</li>
-    <li><i>1984</i>, George Orwell, édition Folio</li>
-</ol>
+	<p>Voici les cinq derniers livres que j'ai lu :</p>
+		<ol>  <!-- La balise ol permet de définir une liste ordonnée - ressource : https://www.w3schools.com/tags/tag_ol.asp -->
+		<li><i>Orgueil et préjugés</i>, Jane Austen, édition Gallimard</li> <!-- la balise li permet de définir chaque élément de la liste et la balise <i> permet de mettre du texte en italique permettant de mettre en avant du contenu - ressource : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/i --> 
+		<li><i>Jane Eyre</i>, Charlotte Brontë, édition Wordsworth Classics</li>
+		<li><i>Animal Farm</i>, George Orwell, édition Penguin</li>
+		<li><i>Les Hauts des Hurlevent</i>, Emily Brontë, édition Hauteville</li>
+		<li><i>1984</i>, George Orwell, édition Folio</li>
+		</ol>
 	</div>
 	
-<p> <label for="prenom"> Comment vous appelez-vous ?</label></p>
+	<p> <label for="prenom"> Comment vous appelez-vous ?</label></p>
 	<input type="text" id="prenom" placeholder="Votre nom">
 	<button onclick="first()">Bonjour...</button>
 	
-	
-<p> <button id="bAide" onclick="Aide()">Afficher l'aide</button>
-<p id="aide"></p>
-</p>
+	<br />
+	<br />
+	<br />
 
 
-
-<div id="exercice4Resultat">
-					<h2 class="has-background-info has-text-white">Exercice 4</h2>
-                    <textarea id="texteExercice4" name="mon_texte" rows="10" cols="50">Ici, on entre du texte qu'on va segmenter en "mots".</textarea>
-                    <br/>
-                    <button onclick="exercice4()">Segmenter le texte dans un tableau.</button>
-					<br/>
-                    </div>
-					<div> 
-					<p> l'explication de l'exercice se trouve en commentaire dans le fichier code.js se trouvant dans le dossier assets > js. </p> 
-					</div>
 
 
 			<div>
 			<div id="container">
-            <h1 style="text-align:center;">Analyse des <span style="color:green">données</span> dans un fichier</h1>
-
+            <h1 style="text-align:center;">Analyse des <span style="color:#E6F7FF">données</span> dans un fichier</h1>
+			
+			<center><button id="btnAide" class="fade" onclick="Aide()">Afficher l'aide</button></center>
+                    <div id="aide" style="display:none;">
+					
+                        <p><i>Voici un mode d'emploi :</i>
+                            <ul>
+                                <li>Etape 1 : Chargez un texte au format .txt à l'aide du bouton Parcourir.</li>
+                                <li>Etape 2 (facultatif) : Précisez les délimiteurs de votre choix puis cliquez sur le bouton Segmentation.</li>
+                                <li>Le bouton Dictionnaire : permet d'obtenir un tableau qui classe les tokens de façon décroissante en fonction du nombre d'occurences.</li>
+                                <li>Le bouton GREP : Entrez un pôle (une regex ou un mot) puis cliquez sur GREP pour obtenir le tableau des lignes d'occurences.</li>
+                                <li>Le bouton Concordancier : Entrez un pôle (une regex ou un mot) et une longueur de contexte puis cliquez sur Concordancier pour obtenir un tableau avec le contexte gauche et droit du pôle recherché.</li>
+                                <li>Le bouton Nombre de phrases : cliquez et il affichera le nombre de phrases.</li>
+                                <li>Le bouton Mots les plus longs : cliquez et il affichera les 10 mots les plus longs du texte.</li>
+                                <li>Le bouton Pie Chart : Saisissez des stopwords et cliquez sur le bouton pour afficher un graphique des 30 mots les plus fréquents dans le texte hors stopwords.</li>
+                                <li>Le bouton SURPRISE : Permet de faire afficher les mots du texte à l'envers</li>
+                            </ul>
+                        </p>
+                    </div>
+					
+			<br />
+			<br />
             <div id="page-wrapper">
                 <div>
                     <span>
@@ -81,7 +92,7 @@
                     <small>
                         <label for="delimID" class="mylabel">Délimiteur(s)</label>
                         &nbsp;
-                        <input type="text" value=" ," name="delim" id="delimID" size="40" />
+                        <input type="text" value=" ,;’'~|&#@=`%*$()[]{}_:+«»§\/.!?" name="delim" id="delimID" size="40" />
                     </small>
                     <br />
                     <small>
@@ -96,33 +107,53 @@
                         <input type="text" value="10" name="lg" id="lgID" size="10" />
                     </small>
                     <br />
+					<br />
+					<small>
+                        <label for="stopwordID" class="mylabel">mots grammaticaux, Stopwords en anglais)</label>
+                        &nbsp;
+                        <input type="text" value="de,le,la,les,à,et,des,un,une,du,que,en,l,que,qu,d,s,se,ne,n,ce,me,sa" name="stopwords" id="stopwordID" size="60" />
+                    </small>
                     <br />
-                    <button onclick="alert('COUCOU');"><span>COUCOU</span></button>
+					<br />
+                    <button class="special" onclick="alert('COUCOU');"><span>COUCOU</span></button>
                     <br />
                     <br />
-                    <button class="submit" onclick="segmentation()"><span>Segmentation</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
-                    <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+                    <button class="fade" onclick="segmentation()"><span>Segmentation</span></button>
+                    <button class="fade" onclick="dictionnaire()"><span>Dictionnaire</span></button>
+                    <button class="fade" onclick="GREP()"><span>GREP</span></button>
+                    <button class="fade" onclick="Concordancier()"> <span>Concordancier</span></button>
+                    <button class="fade" onclick="motsinverses()"><span>SURPRISE</span></button>
+                    <button class="fade" onclick="nombrePhrases()"><span>Nombre des phrases</span></button>
+                    <button class="fade" onclick="MotsLesPlusLongs()"><span>Mots les plus longs</span></button>
+					<button class="fade" onclick="pieChart()"><span>grapheCamembert-Pie Chart</span></button>
                 </p>
+				
             </div>
+			<div id="logger" style="width:100%"></div>
+			<br />
+			
+			
+			<div id="logger3" style="width:100%"></div>
+			
 			<div id="Global">
                 <div id="fileDisplayArea"></div>
                 <div id="page-analysis"></div>
+				<div id="chartContainer" style="height: 300px; width: 100%;"></div>
             </div>
 			</div>
+			
 			<br/>
 			<br/>
 		
 	
 	
 
-<footer>
-  <p><a href="http://www.univ-paris3.fr/">Lien vers le site de Sorbonne Nouvelle.</a></p>
+<footer> <!-- La balise footer correspond au "pied" de la page html - ressource : https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/footer-->
+  <p><a href="http://www.univ-paris3.fr/" class="rainbowBtn">Lien Université.</a></p>
 </footer>
+
     </body>
+	</div>
+	
 	</div>
 </html>

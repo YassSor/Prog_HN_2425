@@ -1,53 +1,58 @@
 html {
-    background: linear-gradient(#ADD8E6, #FFC0CB); 
-	font-size: 14px;
-	margin:auto;
+    background: linear-gradient(#ADD8E6, #FFC0CB); /* background permet de définir la couleur d'arrière plan*/
+	font-size: 14px;  /* Font-size détermine la taille du texte*/
+	margin:auto;  
 }
 
 h1 {  
-
-	font-size:2.5em;
+	font-size:2.5em; 
 	
 	}
 	
 h2 {  
 
-	font-size:1.5em
+	font-size:1.5em;
+	}
+	
+h1, h2 {  
+	color: #FFFFF0; /* Color permet d'indiquer la couleur du texte */
+	text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3, 0px 0px 20px #b393d3; /* Permet de créer une ombre */ 
 	}
 	
 #page{  
 	background-color: #E7FFCE;
-	border: 7px solid white;
+	border: 7px solid white; /* permet de définir la taille, le style ou encore la couleur d'une bordure - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/border */ 
 	margin : 200px;
 	max-width : 100%;
 	}
 	
 .entete{  
-	text-align: center;
-	margin : auto;
+	text-align: center;  /* text-align permet d'aligner horizontalement un texte */  
+	margin : auto;  /* permet de définir la taille des marges à l'extérieur de l'élément - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/margin */
 	}
 	
-#aboutme{  
-	padding : 50px;
+#aboutme{ 
+	display: none; /* display: none;" sert à cacher un élément sans le supprimer, pour pouvoir le réafficher facilement avec la page CSS - ressource : https://www.w3schools.com/css/css_display_visibility.asp*/ 
+	padding : 50px; /* en comparaison avec margin, padding permet de créer un espace supplémentaire à l'intérieur de l'élément - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/margin */
 	}
-	
+		
 
 #logo {
-	width: 25%;
+	width: 25%; /*  width permet de définir la largeur d'un élément */
 	height: auto;
 	margin : 10px;
 } 
 
 #avatar{
-	width: 15%;
-	height: auto;
+	width: 30%;
+	height: auto; /* permet de déterminer la hauteur du contenu - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/height */ 
 	margin : 10px;
 } 
 
 
 p {
 	color: purple;
-	font-weight: bold;
+	font-weight: bold; /* Permet de déterminer l'épaisseur du texte - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/font-weight */
 	font-family: Georgia, serif;
 }
 
@@ -57,13 +62,13 @@ table, th, td {
 	text-align: center;
 	border: 2px solid black;
 	width: auto;
-	border-collapse: separate; 
-	border-spacing : 3px;
-	border-radius : 3px;
+	border-collapse: separate; /* Permet de déterminer le style des bordures - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/border-collapse */ 
+	border-spacing : 3px; /* Permet de déterminer la distance entre les cellules et la bordure - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/border-spacing */ 
+	border-radius : 3px; /* Permet d'arrondir les coins du tableau - ressource : https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */ 
 } 
 
 ol {
-  list-style-position: inside;
+  list-style-position: inside; /* Permet de définir la position du contenu - ressources : https://developer.mozilla.org/fr/docs/Web/CSS/list-style-position */ 
 } 
 
 footer {
@@ -81,7 +86,7 @@ a {
 	background-color: white;
 	border: 3px solid black;
 	padding: 2px;
-	padding-bottom: 5%; 
+	padding-bottom: 5%; /* Permet d'ajuster la hauteur en bas de l'élément - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/padding-bottom */ 
 	width: 80%;
 	margin-left:10%;
 	height: 100%;
@@ -97,12 +102,12 @@ a {
 	display:table;
 }
 #Global #fileDisplayArea {
-	float:left;
+	float:left; /* Permet de contenir un élément dans une zone - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/float */ 
 	width:48%;
 	background: #FFF;
 	font-size:0.9em;
 	height:200px;
-	overflow:scroll;
+	overflow:scroll; /* Permet de gérer le contenu dépassant du flux - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/overflow */ 
 }
 #Global #page-analysis {
 	margin-left:52%;
@@ -110,4 +115,136 @@ a {
 	height:200px;
 	overflow:scroll;
 	font-size:0.9em;
+}
+
+
+
+#chartContainer {
+	padding-top: 5%;
+}
+
+#logger3{
+	color:red;
+}
+
+.rainbowBtn { /* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+	display: block;
+	margin : auto;
+	 width: 200px;
+	 height: 60px;
+	 text-align: center;
+	 line-height: 60px;
+	 color: #fff;
+	 font-size: 15px;
+	 text-decoration: none;    /* Permet de décorer un texte -ressource : https://developer.mozilla.org/fr/docs/Web/CSS/text-decoration */ 
+	 font-family: "Lucida Console", "Courier New", monospace;
+	 box-sizing: border-box;  /* Permet de définir comment la hauteur et la largeur de l'élément doit être affiché (ici l'élément est contenu à l'intérieur d'une "boîte") - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing */ 
+	 background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+	 background-size: 400%;
+	 border-radius: 30px;
+	 z-index: 1; /* Permet de définir l'ordre des éléments - ressources : https://developer.mozilla.org/fr/docs/Web/CSS/z-index */
+}
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.rainbowBtn:hover {  /* hover permet de donner une nouvelle apparence à un élément au moment où l'utilisateur pose le curseur sur ce dernier - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/:hover */ 
+ animation: animate 8s linear infinite; /* Permet de créer une animation sans utilisation de Javascript - ressource : https://www.w3schools.com/css/css3_animations.asp */ 
+}
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+
+
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.fade { /* Ici, le point permet de faire appel à la classe fade définit dans le html. Elle est souvent utilisée pour appliquer un effet de fondu progressif */ 
+	background-color: #FFE5B4;
+	color: Black;
+	transition: background-color 1s;  /* manière dont on passe d'un état à un autre - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/transition */
+	border-radius: 5px;
+	
+}
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.fade:hover {
+    transform: scale(1.05); /* Permet de changer l'apparence d'un élément - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/transform */
+    background-color: #BFD8EB; 
+  }
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.special{
+  position: relative;
+  padding: 0.9em 0.9em;
+  border: none;
+  background-color:transparent;
+  cursor: pointer; /* Permet d'indiquer la forme du curseur - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/cursor */ 
+  outline: none;  /* Permet de définir plusieurs propriétés - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/outline */ 
+  font-size: 12px;
+  margin: 2em 0.4em;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.special::after,   /* after permet d'ajouter du contenu après le contenu réel de l'élément -ressource : https://developer.mozilla.org/fr/docs/Web/CSS/content */
+.special::before{  /* before permet d'ajouter du contenu avant le contenu réel de l'élément - ressource : https://developer.mozilla.org/fr/docs/Web/CSS/content */
+	content: ''; /* Permet de mettre du contenu sans modifier la page HTML - ressource : https://www.w3schools.com/cssref/pr_gen_content.php */ 
+	position: absolute;
+	display:block;
+	width: 60%;
+	height: 40%;
+	border: 5px solid;
+   	transition: all 0.5s ease;
+   	border-radius: 6px;
+}
+.special::after{ /* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+      bottom: 0;
+      right: 0;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: #FFD700;
+      border-right-color: #FFD700;
+     }
+     
+.special::before{  /* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+      top: 0;
+      left: 0;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: #FFD700;
+      border-left-color: #FFD700;
+}
+
+.special:hover::after {    
+  border-bottom-color: #0f4137;
+  border-right-color: #0f4137;
+}
+
+.special:hover::before {     
+  border-top-color: #12776f;
+  border-left-color: #12776f;
+}
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.special:hover:after,
+.special:hover:before{
+      width: 100%;
+      height: 100%;
+	  box-shadow: 0 0 15px rgba(52, 152, 219, 0.8);
+	transform: scale(1.05);
+}
+
+/* pour cette partie nous nous sommes aidées du code fourni par M.BRIGLIA */
+.mylabel {  /* la classe mylabel permet de faire appel aux boutons que l'on souhaite personnaliser sur notre page html */
+	background-color: #add8e6;
+	font-family: arial,helvetica,sans-serif;
+	font-variant: small-caps;
+	font-size: 90%;
+	padding: 2px;
+	border-right: 1px solid #724060;
+	border-bottom: 1px solid #724060;
+	border-radius: 50% 20% / 10% 40%;
 }
